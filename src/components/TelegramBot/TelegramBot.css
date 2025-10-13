@@ -1,0 +1,54 @@
+/* TelegramBot */
+.telegram-bot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.telegram-bot .buttonTry {
+  height: 3.5rem;
+  width: 8rem;
+  background-color: #00000000;
+  color: #777;
+  border: 2px solid #777;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+.telegram-bot .buttonTry:hover {
+  cursor: pointer;
+  background-color: #0088cc;
+  color: #111;
+  border-color: #0088cc;
+}
+
+.telegram-bot .tlist {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.telegram-bot .tlist span {
+  color: #aaa;
+  font-size: 2rem;
+}
+
+.telegram-bot .description img {
+  height: 40rem;
+  margin: 0 5rem;
+  margin-bottom: 2rem;
+}
+.telegram-bot .description .text {
+  font-size: 2rem;
+  max-width: 25rem;
+}
+.telegram-bot .description {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
