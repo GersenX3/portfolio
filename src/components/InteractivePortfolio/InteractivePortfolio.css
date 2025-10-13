@@ -1,9 +1,12 @@
 /* InteractivePortfolio */
 .interactive-portfolio {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 0;
 }
+
 .interactive-portfolio .buttonTry {
   height: 3.5rem;
   width: 8rem;
@@ -21,7 +24,7 @@
 }
 
 .interactive-portfolio .tlist {
-  width: 100vw;
+  width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -29,26 +32,48 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 3rem;
 }
 .interactive-portfolio .tlist span {
   color: #aaa;
   font-size: 2rem;
 }
 
-.interactive-portfolio .description img {
-  height: 40rem;
-  margin: 0 5rem;
-  margin-bottom: 2rem;
-}
-.interactive-portfolio .description .text {
-  font-size: 2rem;
-  max-width: 25rem;
-}
 .interactive-portfolio .description {
   display: flex;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-  width: 100%;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
+  gap: 5rem;
+  width: 100%;
+  max-width: 120rem;
+  padding: 0 2rem;
+}
+
+.interactive-portfolio .description img {
+  height: 40rem;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.interactive-portfolio .description .text {
+  font-size: 2rem;
+  max-width: 40rem;
+  flex-shrink: 1;
+}
+
+@media (max-width: 768px) {
+  .interactive-portfolio .description {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .interactive-portfolio .description img {
+    height: 30rem;
+  }
+
+  .interactive-portfolio .description .text {
+    max-width: 90%;
+    text-align: center;
+  }
 }

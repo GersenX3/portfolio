@@ -1,58 +1,79 @@
 /* TaskTune */
 .task-tune {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.task-tune .buttonTry{
-    height: 3.5rem;
-    width: 8rem;
-    background-color:#00000000;
-    color: #777;
-    border: 2px solid #777;
-    border-radius: 20px;
-    transition: 0.2s;
-}
-.task-tune .buttonTry:hover{
-    cursor: pointer;
-    background-color: #1ed760;
-    color: #111;
-    border-color: #1ed760;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 0;
 }
 
-.task-tune .tlist{
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
+.task-tune .buttonTry {
+  height: 3.5rem;
+  width: 8rem;
+  background-color: #00000000;
+  color: #777;
+  border: 2px solid #777;
+  border-radius: 20px;
+  transition: 0.2s;
 }
-.task-tune .tlist span{
-    color: #aaa;
-    font-size: 2rem;
-
+.task-tune .buttonTry:hover {
+  cursor: pointer;
+  background-color: #1ed760;
+  color: #111;
+  border-color: #1ed760;
 }
 
-
-
-.task-tune .description img{
-    height: 40rem;
-    margin: 0 5rem;
-    margin-bottom: 2rem;
+.task-tune .tlist {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 3rem;
 }
-.task-tune .description .text{
-    font-size: 2rem;
-    max-width: 25rem;
+.task-tune .tlist span {
+  color: #aaa;
+  font-size: 2rem;
 }
-.task-tune .description{
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
+
+.task-tune .description {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  width: 100%;
+  max-width: 120rem;
+  padding: 0 2rem;
+}
+
+.task-tune .description img {
+  height: 40rem;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.task-tune .description .text {
+  font-size: 2rem;
+  max-width: 40rem;
+  flex-shrink: 1;
+}
+
+@media (max-width: 768px) {
+  .task-tune .description {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .task-tune .description img {
+    height: 30rem;
+  }
+
+  .task-tune .description .text {
+    max-width: 90%;
+    text-align: center;
+  }
 }

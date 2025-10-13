@@ -1,59 +1,84 @@
-/* renombrado */
+/* CatSoul */
 .catSoul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.catSoul .buttonTry{
-    height: 3.5rem;
-    width: 8rem;
-    background-color:#00000000;
-    color: #777;
-    border: 2px solid #777;
-    border-radius: 20px;
-    transition: 0.2s;
-}
-.catSoul .buttonTry:hover{
-    cursor: pointer;
-    background-color: #D9D6AD;
-    color: #111;
-    border-color: #D9D6AD;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 0;
 }
 
-.catSoul .tlist{
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.catSoul .buttonTry {
+  height: 3.5rem;
+  width: 8rem;
+  background-color: #00000000;
+  color: #777;
+  border: 2px solid #777;
+  border-radius: 20px;
+  transition: 0.2s;
 }
-.catSoul .tlist span{
-    color: #aaa;
-    font-size: 2rem;
-}
-
-.catSoul #blackSpace{
-    font-weight: 50;
-    color: #111;
+.catSoul .buttonTry:hover {
+  cursor: pointer;
+  background-color: #d9d6ad;
+  color: #111;
+  border-color: #d9d6ad;
 }
 
-.catSoul .description img{
-    height: 30rem;
-    margin-bottom: 2rem;
+.catSoul .tlist {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 3rem;
 }
-.catSoul .description .text{
-    font-size: 2rem;
-    max-width: 25rem;
+.catSoul .tlist span {
+  color: #aaa;
+  font-size: 2rem;
 }
-.catSoul  .description{
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 2rem;
+
+.catSoul #blackSpace {
+  font-weight: 50;
+  color: #111;
+}
+
+.catSoul .description {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  width: 100%;
+  max-width: 120rem;
+  padding: 0 2rem;
+}
+
+.catSoul .description img {
+  height: 30rem;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.catSoul .description .text {
+  font-size: 2rem;
+  max-width: 40rem;
+  flex-shrink: 1;
+}
+
+@media (max-width: 768px) {
+  .catSoul .description {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .catSoul .description img {
+    height: 25rem;
+  }
+
+  .catSoul .description .text {
+    max-width: 90%;
+    text-align: center;
+  }
 }

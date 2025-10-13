@@ -1,60 +1,62 @@
-import React from 'react'
-import {FadeInUp} from "../FadeInUp/FadeInUp.jsx"
-import "../PresentacionSlide/PresentacionSlide.css"
+import React from "react";
+import { FadeInUp } from "../FadeInUp/FadeInUp.jsx";
+import "../PresentacionSlide/PresentacionSlide.css";
 
 function PresentacionSlide() {
-
   return (
     <>
-    <div className='first-slide'>
+      <div className="first-slide">
         <FadeInUp time={500}>
-          <span className='words'>
-              <span className='letter'>F</span>
-              <span className='letter'>U</span>
-              <span className='letter'>L</span>
-              <span className='letter'>L</span>
+          <span className="words">
+            <span className="letter">F</span>
+            <span className="letter">U</span>
+            <span className="letter">L</span>
+            <span className="letter">L</span>
           </span>
         </FadeInUp>
         <FadeInUp time={800}>
-          <div id='guion'></div>
+          <div id="guion"></div>
         </FadeInUp>
         <FadeInUp time={1100}>
-        <span className='words'>
-            <span className='letter'>S</span>
-            <span className='letter'>T</span>
-            <span className='letter'>A</span>
-            <span className='letter'>C</span>
-            <span className='letter'>K</span>
-        </span>
+          <span className="words">
+            <span className="letter">S</span>
+            <span className="letter">T</span>
+            <span className="letter">A</span>
+            <span className="letter">C</span>
+            <span className="letter">K</span>
+          </span>
         </FadeInUp>
         <FadeInUp time={1400}>
-        <span className='words'>
-            <span className='letter'>D</span>
-            <span className='letter'>E</span>
-            <span className='letter'>V</span>
-            <span className='letter'>E</span>
-            <span className='letter'>L</span>
-            <span className='letter'>O</span>
-            <span className='letter'>P</span>
-            <span className='letter'>E</span>
-            <span className='letter'>R</span>
-        </span>
+          <span className="words">
+            <span className="letter">D</span>
+            <span className="letter">E</span>
+            <span className="letter">V</span>
+            <span className="letter">E</span>
+            <span className="letter">L</span>
+            <span className="letter">O</span>
+            <span className="letter">P</span>
+            <span className="letter">E</span>
+            <span className="letter">R</span>
+          </span>
         </FadeInUp>
-    </div>
-    <FadeInUp time={1800}>
-      <div id='contract'>
-        <a href="https://wa.me/qr/3PZEXTUCTWFNL1"  target="_blank">
-          <button>Contract Me</button>
-        </a>
       </div>
-    <div className="arrow">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    </FadeInUp>
+      <FadeInUp time={1800}>
+        <div id="contract">
+          <a
+            href="mailto:galdl1438@gmail.com?subject=Consulta%20Importante&body=Hola%2C%20quisiera%20saber%20m%C3%A1s%20sobre%2E%2E%2E"
+            target="_blank"
+          >
+            <button>Contract Me</button>
+          </a>
+        </div>
+        <div className="arrow">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </FadeInUp>
     </>
-  )
+  );
 }
 
-export {PresentacionSlide};
+export { PresentacionSlide };
