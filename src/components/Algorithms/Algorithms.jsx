@@ -2,6 +2,9 @@ import React from "react";
 import { FadeInLeft } from "../FadeInLeft/FadeInLeft.jsx";
 import "./Algorithms.css";
 
+const TECH = ['React', 'JavaScript']
+const REPO = 'https://github.com/GersenX3/Visual-Algorithms'
+
 function Algorithms() {
   return (
     <>
@@ -19,7 +22,7 @@ function Algorithms() {
         <div className="description">
           <FadeInLeft>
             <div>
-              <img src="./algorithms.png" alt="" className="algorithmsImg" />
+              <img src="./algorithms.png" alt="Sorting algorithms visualizer screenshot" className="algorithmsImg" />
             </div>
           </FadeInLeft>
           <FadeInLeft>
@@ -35,9 +38,17 @@ function Algorithms() {
                   <br />
                 </span>
               </div>
-              <a href="https://algorithms-react.netlify.app/" target="_blank">
-                <button className="buttonTry">Try it</button>
-              </a>
+              <div className="tech-tags">
+                {TECH.map(t => <span key={t} className="tech-tag">{t}</span>)}
+              </div>
+              <div className="project-links">
+                <a href="https://algorithms-react.netlify.app/" target="_blank" rel="noopener noreferrer">
+                  <button className="buttonTry">Try it</button>
+                </a>
+                <a href={REPO} target="_blank" rel="noopener noreferrer">
+                  <button className="buttonGithub">GitHub</button>
+                </a>
+              </div>
             </div>
           </FadeInLeft>
         </div>

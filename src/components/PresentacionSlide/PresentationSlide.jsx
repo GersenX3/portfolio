@@ -1,10 +1,31 @@
 import React from "react";
 import { FadeInUp } from "../FadeInUp/FadeInUp.jsx";
+import { MAILTO } from "../../constants.js";
 import "../PresentacionSlide/PresentacionSlide.css";
 
 function PresentacionSlide() {
   return (
     <>
+      <FadeInUp time={200}>
+        <div id="hero-name">
+          <span className="words">
+            <span className="letter">G</span>
+            <span className="letter">E</span>
+            <span className="letter">R</span>
+            <span className="letter">S</span>
+            <span className="letter">O</span>
+            <span className="letter">N</span>
+            <span className="letter">-</span>
+          </span>
+          <span className="words">
+            <span className="letter">L</span>
+            <span className="letter">O</span>
+            <span className="letter">P</span>
+            <span className="letter">E</span>
+            <span className="letter">Z</span>
+          </span>
+        </div>
+      </FadeInUp>
       <div className="first-slide">
         <FadeInUp time={500}>
           <span className="words">
@@ -23,7 +44,7 @@ function PresentacionSlide() {
             <span className="letter">T</span>
             <span className="letter">A</span>
             <span className="letter">C</span>
-            <span className="letter">K</span>
+            <span className="letter">K </span>
           </span>
         </FadeInUp>
         <FadeInUp time={1400}>
@@ -43,7 +64,7 @@ function PresentacionSlide() {
       <FadeInUp time={1800}>
         <div id="contract">
           <a
-            href="mailto:galdl1438@gmail.com?subject=Consulta%20Importante&body=Hola%2C%20quisiera%20saber%20m%C3%A1s%20sobre%2E%2E%2E"
+            href={MAILTO}
             target="_blank"
           >
             <button>Contract Me</button>

@@ -5,7 +5,7 @@ import "./AboutMeSlide.css"
 const SKILLS = [
   'React', 'JavaScript', 'Node.js', 'Express',
   'Python', 'Django', 'Docker', 'AWS',
-  'Unity', 'C#', 'Godot', 'GDScript',
+  'Unity', 'Godot', 'GDScript',
 ]
 
 function AboutMeSlide() {

@@ -1,5 +1,6 @@
 import React from "react";
 import { FadeInOnScroll } from "../FadeInOnScroll/FadeInOnScroll.jsx";
+import { MAILTO } from "../../constants.js";
 import "../Talk/Talk.css";
 
 function Talk() {
@@ -8,7 +9,7 @@ function Talk() {
       <FadeInOnScroll>
         <div className="marquee">
           <a
-            href="mailto:galdl1438@gmail.com?subject=Consulta%20Importante&body=Hola%2C%20quisiera%20saber%20m%C3%A1s%20sobre%2E%2E%2E"
+            href={MAILTO}
             target="_blank"
             className="marquee__wrap"
           >

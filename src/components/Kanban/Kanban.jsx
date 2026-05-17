@@ -2,6 +2,9 @@ import React from "react";
 import { FadeInLeft } from "../FadeInLeft/FadeInLeft.jsx";
 import "./Kanban.css";
 
+const TECH = ['React', 'JavaScript', 'Node.js']
+const REPO = '#'
+
 function Kanban() {
   return (
     <>
@@ -19,7 +22,7 @@ function Kanban() {
         <div className="description">
           <FadeInLeft>
             <div>
-              <img src="./kanban.png" alt="" className="kanbanImg" />
+              <img src="./kanban.png" alt="Kanban board app screenshot" className="kanbanImg" />
             </div>
           </FadeInLeft>
           <FadeInLeft>
@@ -35,9 +38,17 @@ function Kanban() {
                   <br />
                 </span>
               </div>
-              <a href="http://kanban-react.ddns.net/" target="_blank">
-                <button className="buttonTry">Try it</button>
-              </a>
+              <div className="tech-tags">
+                {TECH.map(t => <span key={t} className="tech-tag">{t}</span>)}
+              </div>
+              <div className="project-links">
+                <a href="http://kanban-react.ddns.net/" target="_blank" rel="noopener noreferrer">
+                  <button className="buttonTry">Try it</button>
+                </a>
+                <a href={REPO} target="_blank" rel="noopener noreferrer">
+                  <button className="buttonGithub">GitHub</button>
+                </a>
+              </div>
             </div>
           </FadeInLeft>
         </div>

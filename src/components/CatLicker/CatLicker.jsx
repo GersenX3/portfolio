@@ -2,6 +2,9 @@ import React from "react";
 import { FadeInLeft } from "../FadeInLeft/FadeInLeft.jsx";
 import "./CatLicker.css";
 
+const TECH = ['Godot', 'Gdscript', 'Aseprite', 'GitHub']
+const REPO = 'https://github.com/GersenX3/cat-licker'
+
 function CatLicker() {
   return (
     <>
@@ -12,14 +15,14 @@ function CatLicker() {
               <span></span>
             </li>
             <li>
-              <span>Cat Licker</span>
+              <span>Cat Licker (Web)</span>
             </li>
           </ul>
         </FadeInLeft>
         <div className="description">
           <FadeInLeft>
             <div>
-              <img src="./catLicker.png" alt="" className="catLickerImg" />
+              <img src="./catLicker.png" alt="Cat Licker idle clicker game screenshot" className="catLickerImg" />
             </div>
           </FadeInLeft>
           <FadeInLeft>
@@ -35,9 +38,17 @@ function CatLicker() {
                   <br />
                 </span>
               </div>
-              <a href="https://gersenx3.itch.io/cat-licker" target="_blank">
-                <button className="buttonTry">Play it</button>
-              </a>
+              <div className="tech-tags">
+                {TECH.map(t => <span key={t} className="tech-tag">{t}</span>)}
+              </div>
+              <div className="project-links">
+                <a href="https://gersenx3.itch.io/cat-licker" target="_blank" rel="noopener noreferrer">
+                  <button className="buttonTry">Play it</button>
+                </a>
+                <a href={REPO} target="_blank" rel="noopener noreferrer">
+                  <button className="buttonGithub">GitHub</button>
+                </a>
+              </div>
             </div>
           </FadeInLeft>
         </div>

@@ -2,6 +2,9 @@ import React from "react";
 import { FadeInLeft } from "../FadeInLeft/FadeInLeft.jsx";
 import "./Snake.css";
 
+const TECH = ['JavaScript', 'HTML', 'CSS']
+const REPO = '#'
+
 function Snake() {
   return (
     <>
@@ -19,7 +22,7 @@ function Snake() {
         <div className="description">
           <FadeInLeft>
             <div>
-              <img src="./snake.png" alt="" className="snakeImg" />
+              <img src="./snake.png" alt="Snake game screenshot" className="snakeImg" />
             </div>
           </FadeInLeft>
           <FadeInLeft>
@@ -35,9 +38,17 @@ function Snake() {
                   <br />
                 </span>
               </div>
-              <a href="https://snake-cube.netlify.app/" target="_blank">
-                <button className="buttonTry">Play it</button>
-              </a>
+              <div className="tech-tags">
+                {TECH.map(t => <span key={t} className="tech-tag">{t}</span>)}
+              </div>
+              <div className="project-links">
+                <a href="https://snake-cube.netlify.app/" target="_blank" rel="noopener noreferrer">
+                  <button className="buttonTry">Play it</button>
+                </a>
+                <a href={REPO} target="_blank" rel="noopener noreferrer">
+                  <button className="buttonGithub">GitHub</button>
+                </a>
+              </div>
             </div>
           </FadeInLeft>
         </div>

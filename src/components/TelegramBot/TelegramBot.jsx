@@ -2,6 +2,9 @@ import React from "react";
 import { FadeInLeft } from "../FadeInLeft/FadeInLeft.jsx";
 import "./TelegramBot.css";
 
+const TECH = ['Python', 'Telegram API', 'Gemini AI']
+const REPO = '#'
+
 function TelegramBot() {
   return (
     <>
@@ -19,7 +22,7 @@ function TelegramBot() {
         <div className="description">
           <FadeInLeft>
             <div>
-              <img src="./telegramBot.png" alt="" className="telegramBotImg" />
+              <img src="./telegramBot.png" alt="Gemini AI Telegram bot screenshot" className="telegramBotImg" />
             </div>
           </FadeInLeft>
           <FadeInLeft>
@@ -35,9 +38,17 @@ function TelegramBot() {
                   <br />
                 </span>
               </div>
-              <a href="https://t.me/example_gemini_bot" target="_blank">
-                <button className="buttonTry">Try it</button>
-              </a>
+              <div className="tech-tags">
+                {TECH.map(t => <span key={t} className="tech-tag">{t}</span>)}
+              </div>
+              <div className="project-links">
+                <a href="https://t.me/example_gemini_bot" target="_blank" rel="noopener noreferrer">
+                  <button className="buttonTry">Try it</button>
+                </a>
+                <a href={REPO} target="_blank" rel="noopener noreferrer">
+                  <button className="buttonGithub">GitHub</button>
+                </a>
+              </div>
             </div>
           </FadeInLeft>
         </div>

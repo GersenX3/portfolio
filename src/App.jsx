@@ -26,17 +26,17 @@ function App() {
     <>
       <div className="main-container">
         <Header />
-        <PresentacionSlide />
+        <br /><br />
         <LineToRight />
-        <AboutMeSlide />
+        <PresentacionSlide />
         <LineToLeft />
+        <AboutMeSlide />
+        <LineToRight />
         <FadeInOnScroll>
           <p id="featuredProjects">Featured Projects</p>
         </FadeInOnScroll>
-        <LineToRight />
-        <CatLicker />
         <LineToLeft />
-        <InteractivePortfolio />
+        <CatLicker />
         <LineToRight />
         <Algorithms />
         <LineToLeft />

@@ -2,6 +2,9 @@ import React from "react";
 import { FadeInLeft } from "../FadeInLeft/FadeInLeft.jsx";
 import "./InteractivePortfolio.css";
 
+const TECH = ['JavaScript', 'Phaser']
+const REPO = '#'
+
 function InteractivePortfolio() {
   return (
     <>
@@ -21,7 +24,7 @@ function InteractivePortfolio() {
             <div>
               <img
                 src="./interactivePortfolio.png"
-                alt=""
+                alt="Interactive 2D platformer portfolio screenshot"
                 className="interactivePortfolioImg"
               />
             </div>
@@ -39,9 +42,17 @@ function InteractivePortfolio() {
                   <br />
                 </span>
               </div>
-              <a href="https://gerson-portfolio.netlify.app/" target="_blank">
-                <button className="buttonTry">Explore</button>
-              </a>
+              <div className="tech-tags">
+                {TECH.map(t => <span key={t} className="tech-tag">{t}</span>)}
+              </div>
+              <div className="project-links">
+                <a href="https://gerson-portfolio.netlify.app/" target="_blank" rel="noopener noreferrer">
+                  <button className="buttonTry">Explore</button>
+                </a>
+                <a href={REPO} target="_blank" rel="noopener noreferrer">
+                  <button className="buttonGithub">GitHub</button>
+                </a>
+              </div>
             </div>
           </FadeInLeft>
         </div>

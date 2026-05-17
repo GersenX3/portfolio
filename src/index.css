@@ -66,3 +66,47 @@ body{
   font-weight: 700;
   overflow-x: hidden;
 }
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+  font-size: 1.2rem;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--color-text);
+  border-radius: 20px;
+  color: var(--color-text-light);
+  transition: 0.2s;
+}
+
+.tech-tag:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.buttonGithub {
+  height: 3.5rem;
+  padding: 0 1.5rem;
+  background-color: var(--color-transparent);
+  color: var(--color-text);
+  border: 2px solid var(--color-text);
+  border-radius: 20px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.buttonGithub:hover {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  border-color: var(--color-accent);
+}
