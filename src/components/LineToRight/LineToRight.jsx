@@ -1,40 +1,28 @@
-import React, { useState, useEffect, useRef, Children  } from 'react';
-import ReactDOM from 'react-dom';
+import React, { useState, useEffect, useRef } from 'react';
 import "./LineToRight.css"
 
 function LineToRight() {
-    const [isVisible, setIsVisible] = useState(false);
-  
-    useEffect(() => {
-      const handleScroll = () => {
-        const scrollTop = window.pageYOffset;
-        const windowHeight = window.innerHeight;
-        const elementOffset = ReactDOM.findDOMNode(ref.current).offsetTop;
-        const elementHeight = ReactDOM.findDOMNode(ref.current).offsetHeight;
-  
-        // Calcula si el elemento está visible en la ventana
-        if (scrollTop > elementOffset - windowHeight + elementHeight / 4) {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
           setIsVisible(true);
+          observer.disconnect();
         }
-      };
-  
-      // Agrega un listener para el evento 'scroll'
-      window.addEventListener('scroll', handleScroll);
-  
-      // Limpia el listener cuando el componente se desmonta
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
-    }, []);
-  
-    const ref = useRef(null);
-  
-    return (
-      <>
-      <div ref={ref} className={`line ${isVisible ? 'line--animate' : ''}`}>
-        {/* Contenido de la línea */}
-      </div>
-      </>
+      },
+      { threshold: 0.5 }
     );
-  }
-  export {LineToRight}
+
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={ref} className={`line ${isVisible ? 'line--animate' : ''}`} />
+  );
+}
+
+export { LineToRight };

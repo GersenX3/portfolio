@@ -1,26 +1,41 @@
 .contact{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 15rem;
-    margin-bottom: 15rem;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    padding: 0 2rem;
 }
 
 .contact p{
-
-    width: 24rem;
+    max-width: 40rem;
     font-size: 1.5rem;
-    text-align: justify;
+    text-align: center;
     margin-bottom: 3rem;
+    line-height: 1.6;
 }
 
-.whatsapp{
-    display: flex;
-    width: 100vw;
-    justify-content: center;
+.contact-email {
+    font-size: 2rem;
+    color: var(--color-text-light);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-text);
+    padding-bottom: 0.3rem;
+    transition: 0.2s;
 }
 
-.whatsapp img{
-    height: 6rem;
+.contact-email:hover {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+}
 
+@media (max-width: 600px) {
+    .contact {
+        margin-top: 6rem;
+        margin-bottom: 6rem;
+    }
+
+    .contact-email {
+        font-size: 1.5rem;
+    }
 }

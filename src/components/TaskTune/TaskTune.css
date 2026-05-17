@@ -10,17 +10,17 @@
 .task-tune .buttonTry {
   height: 3.5rem;
   width: 8rem;
-  background-color: #00000000;
-  color: #777;
-  border: 2px solid #777;
+  background-color: var(--color-transparent);
+  color: var(--color-text);
+  border: 2px solid var(--color-text);
   border-radius: 20px;
   transition: 0.2s;
 }
 .task-tune .buttonTry:hover {
   cursor: pointer;
-  background-color: #1ed760;
-  color: #111;
-  border-color: #1ed760;
+  background-color: var(--color-accent-green);
+  color: var(--color-bg);
+  border-color: var(--color-accent-green);
 }
 
 .task-tune .tlist {
@@ -35,7 +35,7 @@
   margin-bottom: 3rem;
 }
 .task-tune .tlist span {
-  color: #aaa;
+  color: var(--color-text-light);
   font-size: 2rem;
 }
 
@@ -70,6 +70,7 @@
 
   .task-tune .description img {
     height: 30rem;
+    max-width: 90%;
   }
 
   .task-tune .description .text {

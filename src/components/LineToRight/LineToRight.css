@@ -1,13 +1,12 @@
 .line {
-
     margin: 4rem 0rem;
     border-radius: 10px;
     width: 0;
     height: 0.2rem;
-    background-color: #777;
+    background-color: var(--color-text);
     transition: 2s;
-  }
-  
-  .line--animate {
+}
+
+.line--animate {
     width: 100%;
-  }
+}

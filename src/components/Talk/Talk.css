@@ -10,11 +10,6 @@
   height: 1rem;
 }
 
-
-.marquee__wrap:hover .marquee__inner:hover .slide-up,.marquee__wrap:hover .marquee__inner:hover .slide-up:before {
-  transform: translateY(0)
-}
-
 .marquee__inner {
   padding: 0 !important;
   margin: 0 !important;
@@ -24,42 +19,36 @@
   display: flex;
   position: relative;
   animation: marquee 35s linear infinite;
-
 }
 
 @media (min-width: 551px) {
   .marquee__inner {
-      padding-top:5.8rem;
-      padding-bottom: 2.3rem
+    padding-top: 5.8rem;
+    padding-bottom: 2.3rem;
   }
 }
 
 .marquee__inner span {
   white-space: nowrap;
   padding-left: 2rem;
-  padding-right: 2rem
+  padding-right: 2rem;
 }
 
 .marquee__inner .inner-span {
   text-transform: uppercase;
-  color: #777;
+  color: var(--color-text);
   position: relative;
-  overflow: hidden
-}
-
-.marquee__inner .inner-span .slide-up {
-  position: absolute;
-  top: 0;
-  left: 0;
   overflow: hidden;
-  transform: translateY(100%);
-  transition: transform 275ms ease;
-  display: none
 }
-
 
 @keyframes marquee {
   to {
-      transform: translate3d(-50%,0,0)
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (max-width: 600px) {
+  .marquee {
+    font-size: 5rem;
   }
 }

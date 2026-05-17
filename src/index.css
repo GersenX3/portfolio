@@ -41,6 +41,17 @@
 */
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
 
+:root {
+  --color-bg: #111;
+  --color-text: #777;
+  --color-text-light: #aaa;
+  --color-text-lighter: #ccc;
+  --color-accent: #5298F2;
+  --color-accent-green: #1ed760;
+  --color-accent-pink: #ff6b9d;
+  --color-transparent: transparent;
+}
+
 html{
   font-size: 62.5%;
   margin: 0;
@@ -50,8 +61,8 @@ html{
 }
 body{
   font-family:monospace;
-  background-color: #111;
-  color: #777;
-  font-weight: bolder;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-weight: 700;
   overflow-x: hidden;
 }

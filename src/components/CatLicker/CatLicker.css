@@ -10,17 +10,17 @@
 .cat-licker .buttonTry {
   height: 3.5rem;
   width: 8rem;
-  background-color: #00000000;
-  color: #777;
-  border: 2px solid #777;
+  background-color: var(--color-transparent);
+  color: var(--color-text);
+  border: 2px solid var(--color-text);
   border-radius: 20px;
   transition: 0.2s;
 }
 .cat-licker .buttonTry:hover {
   cursor: pointer;
-  background-color: #ff6b9d;
-  color: #111;
-  border-color: #ff6b9d;
+  background-color: var(--color-accent-pink);
+  color: var(--color-bg);
+  border-color: var(--color-accent-pink);
 }
 
 .cat-licker .tlist {
@@ -35,7 +35,7 @@
   margin-bottom: 3rem;
 }
 .cat-licker .tlist span {
-  color: #aaa;
+  color: var(--color-text-light);
   font-size: 2rem;
 }
 
@@ -70,6 +70,7 @@
 
   .cat-licker .description img {
     height: 30rem;
+    max-width: 90%;
   }
 
   .cat-licker .description .text {
