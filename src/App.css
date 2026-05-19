@@ -14,3 +14,100 @@
 html::-webkit-scrollbar {
     width: 0px;
 }
+
+/* Shared section toggle button */
+.section-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(100%, 120rem);
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: monospace;
+  font-weight: 200;
+  font-size: clamp(1.8rem, 2vw, 2.4rem);
+  color: var(--color-text);
+  text-align: left;
+  transition: color 0.2s;
+}
+
+.section-toggle:hover {
+  color: var(--color-text-light);
+}
+
+/* Shared expand arrow */
+.expand-arrow {
+  font-size: 1.4rem;
+  color: var(--color-text);
+  transition: transform 0.25s ease, color 0.2s;
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.expand-arrow.open {
+  transform: rotate(90deg);
+  color: var(--color-accent);
+}
+
+/* Shared accordion body */
+.expand-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.expand-body.open {
+  grid-template-rows: 1fr;
+}
+
+.expand-inner {
+  overflow: hidden;
+}
+
+.project-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0 0;
+  padding: 0 2rem;
+}
+
+.expand-inner {
+  overflow: hidden;
+  width: 100%;
+}
+
+.tab-btn {
+  height: 3.5rem;
+  padding: 0 2.5rem;
+  background-color: transparent;
+  color: var(--color-text);
+  border: 2px solid var(--color-text);
+  border-radius: 20px;
+  font-family: monospace;
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.tab-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.tab-active {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.tab-active:hover {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+}

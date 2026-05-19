@@ -1,22 +1,22 @@
-import React from "react";
 import { FadeInLeft } from "../FadeInLeft/FadeInLeft.jsx";
+import { useLanguage } from "../../context/LanguageContext.jsx";
+import { translations } from "../../translations/translations.js";
 import "./TelegramBot.css";
 
-const TECH = ['Python', 'Telegram API', 'Gemini AI']
-const REPO = '#'
+const TECH = ["Python", "Telegram API", "Gemini AI"];
+const REPO = "https://github.com/GersenX3/bot_telegram_LLMs";
 
 function TelegramBot() {
+  const { lang } = useLanguage();
+  const t = translations[lang].projects.telegramBot;
+
   return (
     <>
       <div className="telegram-bot" id="telegram-bot">
         <FadeInLeft>
           <ul className="tlist">
-            <li>
-              <span></span>
-            </li>
-            <li>
-              <span>Gemini Bot</span>
-            </li>
+            <li><span></span></li>
+            <li><span>Gemini Bot</span></li>
           </ul>
         </FadeInLeft>
         <div className="description">
@@ -28,22 +28,14 @@ function TelegramBot() {
           <FadeInLeft>
             <div>
               <div className="text">
-                <span>
-                  An intelligent Telegram bot powered by Google's Gemini AI.
-                  Chat naturally, ask questions, and get helpful responses
-                  directly in your Telegram conversations. The bot leverages
-                  advanced language models to provide accurate and contextual
-                  answers to your queries.
-                  <br />
-                  <br />
-                </span>
+                <span>{t.description}<br /><br /></span>
               </div>
               <div className="tech-tags">
-                {TECH.map(t => <span key={t} className="tech-tag">{t}</span>)}
+                {TECH.map((tech) => <span key={tech} className="tech-tag">{tech}</span>)}
               </div>
               <div className="project-links">
-                <a href="https://t.me/example_gemini_bot" target="_blank" rel="noopener noreferrer">
-                  <button className="buttonTry">Try it</button>
+                <a href="https://t.me/Gemini_GersenX3_bot" target="_blank" rel="noopener noreferrer">
+                  <button className="buttonTry">{t.btnTry}</button>
                 </a>
                 <a href={REPO} target="_blank" rel="noopener noreferrer">
                   <button className="buttonGithub">GitHub</button>

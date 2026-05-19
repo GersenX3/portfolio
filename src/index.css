@@ -39,28 +39,28 @@
     --decorative-base: #fff;
     --decorative-subdued: #292929;
 */
-@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
 
 :root {
   --color-bg: #111;
   --color-text: #777;
   --color-text-light: #aaa;
   --color-text-lighter: #ccc;
-  --color-accent: #5298F2;
+  --color-accent: #5298f2;
   --color-accent-green: #1ed760;
   --color-accent-pink: #ff6b9d;
   --color-transparent: transparent;
 }
 
-html{
+html {
   font-size: 62.5%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior:smooth;
+  scroll-behavior: smooth;
 }
-body{
-  font-family:monospace;
+body {
+  font-family: monospace;
   background-color: var(--color-bg);
   color: var(--color-text);
   font-weight: 700;
@@ -92,6 +92,7 @@ body{
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .buttonGithub {
@@ -103,6 +104,49 @@ body{
   border-radius: 20px;
   transition: 0.2s;
   cursor: pointer;
+}
+
+.description {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  max-width: 120rem;
+  padding: 0 2rem;
+}
+
+.description img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.description .text {
+  font-size: clamp(1.6rem, 1.5vw, 2rem);
+  max-width: 45rem;
+  flex-shrink: 1;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+@media (max-width: 768px) {
+  .description {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .description img {
+    max-width: 98%;
+    height: auto;
+  }
+
+  .description .text {
+    max-width: 98%;
+    text-align: center;
+  }
 }
 
 .buttonGithub:hover {

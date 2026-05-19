@@ -1,0 +1,79 @@
+/* Aegis */
+.aegis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.aegis .buttonTry {
+  height: 3.5rem;
+  width: 8rem;
+  background-color: #00000000;
+  color: #777;
+  border: 2px solid #777;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+.aegis .buttonTry:hover {
+  cursor: pointer;
+  background-color: #5298f2;
+  color: #111;
+  border-color: #5298f2;
+}
+
+.aegis .tlist {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.aegis .tlist span {
+  color: #aaa;
+  font-size: 2rem;
+}
+
+.aegis .description {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  width: 100%;
+  max-width: 120rem;
+  padding: 0 2rem;
+}
+
+.aegis .description img {
+  height: 40rem;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.aegis .description .text {
+  font-size: 2rem;
+  max-width: 40rem;
+  flex-shrink: 1;
+}
+
+@media (max-width: 768px) {
+  .aegis .description {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .aegis .description img {
+    height: 30rem;
+  }
+
+  .aegis .description .text {
+    max-width: 90%;
+    text-align: center;
+  }
+}

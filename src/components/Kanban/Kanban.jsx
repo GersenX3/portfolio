@@ -1,22 +1,22 @@
-import React from "react";
 import { FadeInLeft } from "../FadeInLeft/FadeInLeft.jsx";
+import { useLanguage } from "../../context/LanguageContext.jsx";
+import { translations } from "../../translations/translations.js";
 import "./Kanban.css";
 
-const TECH = ['React', 'JavaScript', 'Node.js']
-const REPO = '#'
+const TECH = ["React", "JavaScript", "Node.js", "Docker", "Flask", "PostgreSQL"];
+const REPO = "https://github.com/GersenX3/kanban-project";
 
 function Kanban() {
+  const { lang } = useLanguage();
+  const t = translations[lang].projects.kanban;
+
   return (
     <>
       <div className="kanban" id="kanban">
         <FadeInLeft>
           <ul className="tlist">
-            <li>
-              <span></span>
-            </li>
-            <li>
-              <span>Kanban Board</span>
-            </li>
+            <li><span></span></li>
+            <li><span>Kanban Board</span></li>
           </ul>
         </FadeInLeft>
         <div className="description">
@@ -28,22 +28,14 @@ function Kanban() {
           <FadeInLeft>
             <div>
               <div className="text">
-                <span>
-                  A modern Kanban board application built with React for
-                  efficient project management. Organize your tasks with
-                  drag-and-drop functionality, create custom columns, and track
-                  your workflow. A clean and intuitive interface designed to
-                  boost productivity and team collaboration.
-                  <br />
-                  <br />
-                </span>
+                <span>{t.description}<br /><br /></span>
               </div>
               <div className="tech-tags">
-                {TECH.map(t => <span key={t} className="tech-tag">{t}</span>)}
+                {TECH.map((t) => <span key={t} className="tech-tag">{t}</span>)}
               </div>
               <div className="project-links">
-                <a href="http://kanban-react.ddns.net/" target="_blank" rel="noopener noreferrer">
-                  <button className="buttonTry">Try it</button>
+                <a href="https://kanban-ui-two.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  <button className="buttonTry">{t.btnTry}</button>
                 </a>
                 <a href={REPO} target="_blank" rel="noopener noreferrer">
                   <button className="buttonGithub">GitHub</button>

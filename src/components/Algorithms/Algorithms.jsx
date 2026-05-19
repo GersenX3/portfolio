@@ -1,22 +1,22 @@
-import React from "react";
 import { FadeInLeft } from "../FadeInLeft/FadeInLeft.jsx";
+import { useLanguage } from "../../context/LanguageContext.jsx";
+import { translations } from "../../translations/translations.js";
 import "./Algorithms.css";
 
-const TECH = ['React', 'JavaScript']
-const REPO = 'https://github.com/GersenX3/Visual-Algorithms'
+const TECH = ["React", "JavaScript"];
+const REPO = "https://github.com/GersenX3/Visual-Algorithms";
 
 function Algorithms() {
+  const { lang } = useLanguage();
+  const t = translations[lang].projects.algorithms;
+
   return (
     <>
       <div className="algorithms" id="algorithms">
         <FadeInLeft>
           <ul className="tlist">
-            <li>
-              <span></span>
-            </li>
-            <li>
-              <span>Sorting Algorithms</span>
-            </li>
+            <li><span></span></li>
+            <li><span>{t.title}</span></li>
           </ul>
         </FadeInLeft>
         <div className="description">
@@ -28,22 +28,14 @@ function Algorithms() {
           <FadeInLeft>
             <div>
               <div className="text">
-                <span>
-                  A visual sorting algorithms platform that demonstrates how
-                  different sorting methods work in real-time. Watch bubble
-                  sort, quick sort, merge sort, and other algorithms organize
-                  data before your eyes. Perfect for learning and understanding
-                  algorithm efficiency through interactive visualization.
-                  <br />
-                  <br />
-                </span>
+                <span>{t.description}<br /><br /></span>
               </div>
               <div className="tech-tags">
-                {TECH.map(t => <span key={t} className="tech-tag">{t}</span>)}
+                {TECH.map((tech) => <span key={tech} className="tech-tag">{tech}</span>)}
               </div>
               <div className="project-links">
                 <a href="https://algorithms-react.netlify.app/" target="_blank" rel="noopener noreferrer">
-                  <button className="buttonTry">Try it</button>
+                  <button className="buttonTry">{t.btnTry}</button>
                 </a>
                 <a href={REPO} target="_blank" rel="noopener noreferrer">
                   <button className="buttonGithub">GitHub</button>

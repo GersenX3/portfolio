@@ -1,54 +1,48 @@
-import React from 'react'
-import { FadeInLeft } from '../FadeInLeft/FadeInLeft.jsx'
-import "./CatSoul.css"
+import { FadeInLeft } from "../FadeInLeft/FadeInLeft.jsx";
+import { useLanguage } from "../../context/LanguageContext.jsx";
+import { translations } from "../../translations/translations.js";
+import "./CatSoul.css";
 
-const TECH = ['GameMaker 2', 'GDScript']
-const REPO = '#'
+const TECH = ["Godot", "GDScript", "Aseprite", "GdShader"];
 
 function CatSoul() {
+  const { lang } = useLanguage();
+  const t = translations[lang].projects.catSoul;
 
   return (
     <>
-      <div className='catSoul' id='cat-soul'>
+      <div className="catSoul" id="cat-soul">
         <FadeInLeft>
-        <ul className='tlist'>
-          <li>
-            <span id='blackSpace'> Cat<br/> Soul</span>
-          </li>
-          <li>
-            <span>
-                Cat Soul
-            </span>
-          </li>
-        </ul>
+          <ul className="tlist">
+            <li><span id="blackSpace"> Cat<br /> Soul</span></li>
+            <li><span>Cat Soul</span></li>
+          </ul>
         </FadeInLeft>
-        <div className='description'>
-        <FadeInLeft>
-          <div>
-            <img src="./catSoul.gif" alt="Cat Soul platformer game preview" className='taskTuneImg'/>
-          </div>
-        </FadeInLeft>  
-        <FadeInLeft>
-          <div>
-            <div className='text'>
-              <span>Cat soul is a platform game that is being developed with GameMaker 2.
-An adventure that will explore the lives of three kitten brothers who share a sad past which they do not yet know.
-The release date for Nintento Switch and PC will be confirmed in the near future.<br/><br/></span>
+        <div className="description">
+          <FadeInLeft>
+            <div>
+              <img src="./catSoul.gif" alt="Cat Soul platformer game preview" className="taskTuneImg" />
             </div>
-            <div className="tech-tags">
-              {TECH.map(t => <span key={t} className="tech-tag">{t}</span>)}
+          </FadeInLeft>
+          <FadeInLeft>
+            <div>
+              <div className="text">
+                <span>{t.description}<br /><br /></span>
+              </div>
+              <div className="tech-tags">
+                {TECH.map((tech) => <span key={tech} className="tech-tag">{tech}</span>)}
+              </div>
+              <div className="project-links">
+                <a href="https://gersenx3.itch.io/" target="_blank" rel="noopener noreferrer">
+                  <button className="buttonTry">{t.btnTry}</button>
+                </a>
+              </div>
             </div>
-            <div className="project-links">
-              <a href="https://www.youtube.com/watch?v=-TBrfFGcDgY&t=5s" target="_blank" rel="noopener noreferrer"><button className='buttonTry'>See more</button></a>
-              <a href={REPO} target="_blank" rel="noopener noreferrer"><button className="buttonGithub">GitHub</button></a>
-            </div>
-          
-          </div>
-          </FadeInLeft>  
+          </FadeInLeft>
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export {CatSoul};
+export { CatSoul };

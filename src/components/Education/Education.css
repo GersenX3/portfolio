@@ -1,0 +1,118 @@
+/* Education */
+.education-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 2rem 2rem;
+}
+
+.education-entry {
+  border-bottom: 1px solid #222;
+  padding: 2.5rem 0;
+}
+
+.education-entry:last-child {
+  border-bottom: none;
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.education-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.education-school {
+  font-size: 2rem;
+  color: var(--color-text-lighter);
+}
+
+.education-location {
+  font-size: 1.4rem;
+  color: var(--color-text);
+}
+
+.education-date {
+  font-size: 1.4rem;
+  color: var(--color-accent);
+  white-space: nowrap;
+}
+
+.education-degree-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.education-degree-title {
+  font-size: 1.6rem;
+  color: var(--color-text-light);
+}
+
+.education-degree-subtitle {
+  font-size: 1.4rem;
+  color: var(--color-text);
+}
+
+/* Certificates */
+.certs-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.cert-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.cert-item::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-size: 1.4rem;
+}
+
+.cert-name {
+  font-size: 1.5rem;
+  color: var(--color-text-light);
+  line-height: 1.4;
+}
+
+.cert-meta {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.3rem;
+  color: var(--color-text);
+}
+
+.cert-date {
+  color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .education-header {
+    flex-direction: column;
+  }
+
+  .cert-name {
+    font-size: 1.4rem;
+  }
+}

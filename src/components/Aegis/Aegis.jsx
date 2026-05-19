@@ -1,28 +1,27 @@
 import { FadeInLeft } from "../FadeInLeft/FadeInLeft.jsx";
 import { useLanguage } from "../../context/LanguageContext.jsx";
 import { translations } from "../../translations/translations.js";
-import "./CatLicker.css";
+import "./Aegis.css";
 
-const TECH = ["Godot", "GDScript", "Aseprite", "GitHub"];
-const REPO = "https://github.com/GersenX3/cat-licker";
+const TECH = ["React", "JavaScript", "Astro"];
 
-function CatLicker() {
+function Aegis() {
   const { lang } = useLanguage();
-  const t = translations[lang].projects.catLicker;
+  const t = translations[lang].projects.aegis;
 
   return (
     <>
-      <div className="cat-licker" id="cat-licker">
+      <div className="aegis" id="aegis">
         <FadeInLeft>
           <ul className="tlist">
             <li><span></span></li>
-            <li><span>Cat Licker (Web)</span></li>
+            <li><span>Aegis</span></li>
           </ul>
         </FadeInLeft>
         <div className="description">
           <FadeInLeft>
             <div>
-              <img src="./catLicker.png" alt="Cat Licker idle clicker game screenshot" className="catLickerImg" />
+              <img src="./aegis.png" alt="Aegis cybersecurity landing page screenshot" className="aegisImg" />
             </div>
           </FadeInLeft>
           <FadeInLeft>
@@ -34,11 +33,8 @@ function CatLicker() {
                 {TECH.map((tech) => <span key={tech} className="tech-tag">{tech}</span>)}
               </div>
               <div className="project-links">
-                <a href="https://gersenx3.itch.io/cat-licker" target="_blank" rel="noopener noreferrer">
+                <a href="https://secureaegis.net/" target="_blank" rel="noopener noreferrer">
                   <button className="buttonTry">{t.btnTry}</button>
-                </a>
-                <a href={REPO} target="_blank" rel="noopener noreferrer">
-                  <button className="buttonGithub">GitHub</button>
                 </a>
               </div>
             </div>
@@ -49,4 +45,4 @@ function CatLicker() {
   );
 }
 
-export { CatLicker };
+export { Aegis };

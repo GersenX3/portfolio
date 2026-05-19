@@ -1,9 +1,13 @@
-import React from "react";
 import { FadeInUp } from "../FadeInUp/FadeInUp.jsx";
 import { MAILTO } from "../../constants.js";
+import { useLanguage } from "../../context/LanguageContext.jsx";
+import { translations } from "../../translations/translations.js";
 import "../PresentacionSlide/PresentacionSlide.css";
 
 function PresentacionSlide() {
+  const { lang } = useLanguage();
+  const t = translations[lang].hero;
+
   return (
     <>
       <FadeInUp time={200}>
@@ -63,11 +67,8 @@ function PresentacionSlide() {
       </div>
       <FadeInUp time={1800}>
         <div id="contract">
-          <a
-            href={MAILTO}
-            target="_blank"
-          >
-            <button>Contract Me</button>
+          <a href={MAILTO} target="_blank">
+            <button>{t.cta}</button>
           </a>
         </div>
         <div className="arrow">
