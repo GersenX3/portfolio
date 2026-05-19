@@ -19,7 +19,7 @@ export const translations = {
           company: "Continental",
           location: "Guadalajara, Jal",
           role: "Jazz Extensions Developer Intern",
-          period: "Nov 2023 — Jan 2025",
+          period: "June 2023 — June 2025",
           bullets: [
             "Developed interactive widgets for Doors Next Generation (DNG) on the Jazz platform, enhancing user experience and functionality.",
             "Built Python scripts to automate data updates across Jazz tools, improving workflow efficiency by 30%.",
@@ -154,7 +154,7 @@ export const translations = {
           company: "Continental",
           location: "Guadalajara, Jal",
           role: "Desarrollador Interno — Extensiones Jazz",
-          period: "Nov 2023 — Ene 2025",
+          period: "Junio 2023 — Junio 2025",
           bullets: [
             "Desarrollé widgets interactivos para Doors Next Generation (DNG) en la plataforma Jazz, mejorando la experiencia y funcionalidad del usuario.",
             "Construí scripts de Python para automatizar actualizaciones de datos en herramientas Jazz, mejorando la eficiencia de flujo de trabajo en un 30%.",
